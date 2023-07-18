@@ -23,3 +23,11 @@ function startGame() {
   }
   messageEl.textContent = message;
 }
+
+function newCard() {
+  let card = 7;
+
+  sum += card;
+
+  startGame();
+}
