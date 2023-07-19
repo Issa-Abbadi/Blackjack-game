@@ -1,5 +1,5 @@
-let firstCard = 6;
-let secondCard = 7;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 
 let sum = firstCard + secondCard;
@@ -33,10 +33,20 @@ function renderGame() {
   messageEl.textContent = message;
 }
 
-function getRandomCard() {}
+function getRandomCard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+
+  if (randomNumber > 10) {
+    return 10;
+  } else if (randomNumber === 1) {
+    return 11;
+  } else {
+    return randomNumber;
+  }
+}
 
 function newCard() {
-  let card = 7;
+  let card = getRandomCard();
 
   sum += card;
 
