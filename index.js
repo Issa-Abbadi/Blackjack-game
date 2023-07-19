@@ -1,3 +1,8 @@
+let player = {
+  name: "Per",
+  chips: 200,
+};
+
 let cards = [];
 
 let sum = 0;
@@ -49,11 +54,13 @@ function getRandomCard() {
 }
 
 function newCard() {
-  let card = getRandomCard();
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
 
-  sum += card;
+    sum += card;
 
-  cards.push(card);
+    cards.push(card);
 
-  renderGame();
+    renderGame();
+  }
 }
